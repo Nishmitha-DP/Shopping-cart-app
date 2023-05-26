@@ -16,17 +16,15 @@ function HomeProductsList({ dataForHome, handleProductDecrement, handleProductIn
                             <p>{product.productname}</p>
                             <p>${product.price}</p>
                             {
-                                // quantity[index] === 0 ?
                                 product.quantity === 0 ?
                                     < Button onClick={() => handleProductIncrement(index)} value={'add to cart'} /> :
                                     <p>
                                         < Button onClick={() => handleProductDecrement(index)} value={'-'} />
-                                        {/* {quantity[index]} */}
                                         {product.quantity}
                                         < Button onClick={() => handleProductIncrement(index)} value={'+'} />
                                     </p>
                             }
-                           
+
                         </div>
                     )
                 }
@@ -38,4 +36,3 @@ function HomeProductsList({ dataForHome, handleProductDecrement, handleProductIn
 }
 
 export default HomeProductsList
-

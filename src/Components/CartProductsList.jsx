@@ -4,7 +4,6 @@ import Button from './Button'
 import CartSummary from './CartSummary'
 
 function CartProductsList({dataForCart,handleProductDecrement,handleProductIncrement}) {
-    // console.log(dataForCart)
     return <div className='carts'>
         <div className='cart-data'>
             <div className="cart-list">
@@ -12,7 +11,6 @@ function CartProductsList({dataForCart,handleProductDecrement,handleProductIncre
                     dataForCart.filter(item => item.quantity > 0).map((product, index) =>
                         <div className="cart-items" key={index}>
                             <p>{product.name}</p>
-                            {/* <p>{product.quantity}</p> */}
                             <p>
                                 < Button onClick={() => handleProductDecrement(index)} value={'-'} />
                                 {product.quantity}
@@ -30,5 +28,3 @@ function CartProductsList({dataForCart,handleProductDecrement,handleProductIncre
 }
 
 export default CartProductsList
-
-
